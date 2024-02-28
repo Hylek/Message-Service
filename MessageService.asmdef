@@ -1,0 +1,16 @@
+{
+    "name": "MessageService",
+    "rootNamespace": "",
+    "references": [
+        "GUID:694dbaf5e73a04e30b0c84249f247b52"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

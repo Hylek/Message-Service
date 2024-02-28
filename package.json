@@ -1,0 +1,16 @@
+{
+	"name": "com.danielcumbor.messageservice",
+	"version": "1.0.0",
+	"displayName": "Message Service",
+	"description": "A message service system that integrates TinyMessenger for use in Unity and Monobehaviours.",
+	"unity": "2022.3",
+	"unityRelease": "15f1",
+	"dependencies": {
+    	"com.danielcumbor.servicelocator": "1.0.0"
+ 	},
+	"author": {
+		"name": "Daniel Cumbor",
+		"email": "dan-dev@proton.me",
+		"url": "https://www.danielcumbor.uk"
+	}
+}
