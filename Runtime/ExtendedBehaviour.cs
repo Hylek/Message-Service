@@ -8,7 +8,7 @@ namespace DC.MessageService
 {
     public class ExtendedBehaviour : MonoBehaviour
     {
-        protected ITinyMessengerHub EventHub => _eventHub ??= Locator.Find<ITinyMessengerHub>();
+        protected ITinyMessengerHub EventHub => _eventHub ??= BaseLocator.Find<ITinyMessengerHub>();
 
         private Dictionary<Type, TinyMessageSubscriptionToken> _tokens;
         private ITinyMessengerHub _eventHub;
@@ -20,9 +20,9 @@ namespace DC.MessageService
     
         protected void Subscribe<T>(Action<T> action) where T : class, ITinyMessage
         {
-            if (!Locator.DoesServiceExist(typeof(ITinyMessengerHub)))
+            if (!BaseLocator.DoesServiceExist(typeof(ITinyMessengerHub)))
             {
-                Locator.AddNewService<ITinyMessengerHub>(new TinyMessengerHub());
+                BaseLocator.AddNewService<ITinyMessengerHub>(new TinyMessengerHub());
             }
             
             _tokens.Add(typeof(T), EventHub.Subscribe(action));
